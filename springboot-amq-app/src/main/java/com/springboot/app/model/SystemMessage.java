@@ -2,11 +2,14 @@ package com.springboot.app.model;
 
 import java.io.Serializable;
 
+import jakarta.validation.constraints.NotNull;
+
 public class SystemMessage implements Serializable {
 	private static final long serialVersionUID = 1;
 	
-
+	@NotNull(message = "Source is required")
 	private String source;
+	@NotNull(message = "Message is required")
 	private String message;
 	public String getSource() {
 		return source;
